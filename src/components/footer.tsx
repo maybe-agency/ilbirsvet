@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { clinic, type SiteDictionary } from "@/data/site";
 import { Instagram, MessageCircle, Phone } from "./icons";
 import { Logo } from "./logo";
@@ -47,9 +48,29 @@ export function Footer({ dictionary }: { dictionary: SiteDictionary }) {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-shell flex flex-col gap-2 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Ветеринарная клиника «Илбирс»</p>
-          <p>Бишкек, Кыргызстан</p>
+        <div className="container-shell flex flex-col gap-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="grid gap-1">
+            <p>© {new Date().getFullYear()} Ветеринарная клиника «Илбирс»</p>
+            <p>Бишкек, Кыргызстан</p>
+          </div>
+          <a
+            href="https://maybe.kg"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Разработано и продвигается агентством Maybe"
+            className="inline-flex min-h-11 w-fit items-center gap-3 rounded-md border border-white/10 bg-white px-3 py-2 text-[#315d6d] shadow-sm transition-transform hover:-translate-y-0.5"
+          >
+            <span className="max-w-28 text-[10px] font-bold leading-4">
+              Разработано и продвигается агентством
+            </span>
+            <Image
+              src="/brands/maybe-logo.svg"
+              alt="Maybe"
+              width={76}
+              height={24}
+              className="h-6 w-auto"
+            />
+          </a>
         </div>
       </div>
     </footer>
