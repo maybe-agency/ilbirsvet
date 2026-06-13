@@ -21,7 +21,7 @@ const ru = {
   navigation: [
     { label: "Контакты", href: "/#contacts" },
     { label: "Наши услуги", href: "/#services" },
-    { label: "Прайс", href: "/#offers" },
+    { label: "Прайс", href: "/price" },
     { label: "Блог", href: "/#blog" },
   ],
   hero: {

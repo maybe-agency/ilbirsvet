@@ -12,6 +12,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: [`${clinic.website}/images/ilbirs-hero-editorial-v2.jpg`],
       alternates: { languages: { ru: clinic.website } },
     },
+    {
+      url: `${clinic.website}/price`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+      alternates: { languages: { ru: `${clinic.website}/price` } },
+    },
     ...articles.map((article) => ({
       url: `${clinic.website}/blog/${article.slug}`,
       lastModified: article.modifiedDate,
